@@ -16,6 +16,13 @@
 </svelte:head>
 
 <Page>
+	<div class="mb-10 flex flex-col items-center gap-4 text-center">
+		<h1 class="font-serif text-2xl lg:text-5xl">Edit your profile</h1>
+		<p class="max-w-[60ch] font-sans lg:text-xl">
+			Enter your work history, education and professional certifications. This information will be
+			used to create your custom business card, resumes & cover letters.
+		</p>
+	</div>
 	<div class="grid w-full grid-cols-1 gap-5 lg:grid-cols-5">
 		<div class="flex flex-col gap-5 lg:col-span-3">
 			<ContactInfo />
