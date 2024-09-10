@@ -20,6 +20,6 @@
 
 <style lang="postcss">
 	header {
-		@apply flex items-center justify-between gap-1.5 p-3;
+		@apply sticky top-0 z-10 flex items-center justify-between gap-1.5 bg-background p-3;
 	}
 </style>

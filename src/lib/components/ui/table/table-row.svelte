@@ -1,14 +1,11 @@
 <script>
-	import { cn } from "$lib/utils.js";
+	import { cn } from '$lib/utils.js';
 	let className = undefined;
 	export { className as class };
 </script>
 
 <tr
-	class={cn(
-		"hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors",
-		className
-	)}
+	class={cn('border-b transition-colors data-[state=selected]:bg-muted', className)}
 	{...$$restProps}
 	on:click
 	on:keydown
