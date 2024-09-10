@@ -1,9 +1,10 @@
 <script>
-	import Page from '$lib/components/layout/Page.svelte';
-	import CardPreview from '$lib/components/profile/CardPreview.svelte';
 	import * as Card from '$lib/components/ui/card';
+	import * as Resizable from '$lib/components/ui/resizable/index.js';
 	import { Button } from '$lib/components/ui/button';
 	import { Pencil } from 'lucide-svelte';
+	import Page from '$lib/components/layout/Page.svelte';
+	import CardPreview from '$lib/components/profile/CardPreview.svelte';
 	import Experience from '$lib/components/profile/Experience.svelte';
 	import ContactInfo from '$lib/components/profile/ContactInfo.svelte';
 	import Education from '$lib/components/profile/Education.svelte';
@@ -23,14 +24,16 @@
 			used to create your custom business card, resumes & cover letters.
 		</p>
 	</div>
-	<div class="grid w-full grid-cols-1 gap-5 lg:grid-cols-5">
-		<div class="flex flex-col gap-5 lg:col-span-3">
+
+	<Resizable.PaneGroup direction="horizontal" class="mb-10 w-full gap-5">
+		<Resizable.Pane defaultSize={70} class="flex flex-col gap-5">
 			<ContactInfo />
 			<Experience />
 			<Education />
 			<Certifications />
-		</div>
-		<div class="flex flex-col gap-5 lg:col-span-2">
+		</Resizable.Pane>
+		<Resizable.Handle withHandle />
+		<Resizable.Pane defaultSize={30} class="flex flex-col gap-5">
 			<Card.Root>
 				<Card.Header>
 					<Card.Title>Live Preview</Card.Title>
@@ -51,6 +54,21 @@
 					<ResumePreview />
 				</Card.Content>
 			</Card.Root>
-		</div>
-	</div>
+			<div
+				class="mb-10 flex flex-col items-start justify-between gap-5 rounded-xl bg-background px-6 py-8 text-foreground"
+			>
+				<div class="flex flex-col gap-2">
+					<h1 class="font-serif text-xl">Next: Customize Layout & Design</h1>
+					<p class="max-w-[60ch] font-sans">
+						Enter your work history, education and professional certifications. This information
+						will be used to create your custom business card, resumes & cover letters.
+					</p>
+				</div>
+				<div class="flex gap-2">
+					<Button size="sm" variant="outline">Back to Dashboard</Button>
+					<Button size="sm" variant="invert">Layout & Design</Button>
+				</div>
+			</div>
+		</Resizable.Pane>
+	</Resizable.PaneGroup>
 </Page>

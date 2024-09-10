@@ -7,7 +7,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
 	class={cn(
-		'flex flex-col gap-3 rounded-lg border bg-card p-4 text-card-foreground shadow',
+		'flex flex-col gap-3 rounded-lg border bg-card p-4 text-card-foreground shadow lg:p-6',
 		className
 	)}
 	{...$$restProps}

@@ -8,9 +8,10 @@ const buttonVariants = tv({
 			invert: 'bg-foreground text-background hover:bg-foreground/90 shadow',
 			destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-sm',
 			outline:
-				'border-input bg-background hover:bg-accent hover:text-accent-foreground border shadow-sm',
+				'border-input border-2 bg-transparent hover:border-accent hover:text-accent border shadow-sm',
 			secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm',
 			ghost: 'text-muted-foreground hover:text-primary',
+			neutral: 'bg-background text-foreground',
 			active: 'text-primary bg-primary/5 border border-primary/20',
 			link: 'text-primary underline-offset-4 hover:underline'
 		},
@@ -19,6 +20,7 @@ const buttonVariants = tv({
 			xs: 'h-6 rounded-lg px-2 text-xs',
 			sm: 'h-8 rounded-lg px-2 text-xs',
 			lg: 'h-10 rounded-lg px-8',
+			xl: 'h-auto rounded-lg py-3 px-8 gap-3 text-xl font-semibold',
 			icon: 'h-9 w-9',
 			circle: 'h-9 w-9 rounded-full',
 			sidebar: 'h-8 rounded-md px-3 text-xs justify-start',
