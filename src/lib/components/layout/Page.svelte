@@ -4,10 +4,9 @@
 </script>
 
 <div class="page">
-	<Sidebar />
 	<main>
 		<Header />
-		<section class="page-content">
+		<section class="flex flex-1 flex-col gap-3 p-5 lg:px-24">
 			<slot></slot>
 		</section>
 	</main>
@@ -19,10 +18,6 @@
 	}
 
 	main {
-		@apply flex h-screen w-full flex-shrink flex-grow flex-col overflow-auto bg-background;
-	}
-
-	.page-content {
-		@apply flex flex-1 flex-col gap-3 p-3;
+		@apply flex min-h-screen w-full flex-col bg-background;
 	}
 </style>
