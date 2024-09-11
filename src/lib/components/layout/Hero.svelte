@@ -8,4 +8,7 @@
 	<p class="max-w-[60ch] font-sans lg:text-xl">
 		{description}
 	</p>
+	<div class="flex items-center justify-center gap-2">
+		<slot name="buttons"></slot>
+	</div>
 </div>

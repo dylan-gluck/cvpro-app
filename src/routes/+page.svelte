@@ -1,7 +1,7 @@
 <script>
 	import { Button } from '$lib/components/ui/button';
-	import { Download } from 'lucide-svelte';
-	import { ArrowRight } from 'svelte-radix';
+	import { Download, RefreshCcw } from 'lucide-svelte';
+	import { ArrowRight, LinkedinLogo } from 'svelte-radix';
 	import Hero from '$lib/components/layout/Hero.svelte';
 	import Cta from '$lib/components/layout/Cta.svelte';
 	import Experience from '$lib/components/profile/Experience.svelte';
@@ -28,7 +28,7 @@
 	<title>Profile - CV Pro</title>
 </svelte:head>
 
-<Hero title={heroCopy.title} description={heroCopy.description} />
+<Hero title={heroCopy.title} description={heroCopy.description}></Hero>
 
 <ResizableDesktop>
 	<svelte:fragment slot="left">
