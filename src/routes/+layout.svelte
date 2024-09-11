@@ -1,5 +1,9 @@
 <script>
 	import '../app.css';
+
+	import Page from '$lib/components/layout/Page.svelte';
 </script>
 
-<slot></slot>
+<Page>
+	<slot></slot>
+</Page>
