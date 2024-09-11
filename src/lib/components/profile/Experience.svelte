@@ -8,10 +8,13 @@
 </script>
 
 <Card.Root>
-	<Card.Header>
-		<Card.Title>Experience</Card.Title>
-		<Card.Description>Professional background and work history</Card.Description>
-	</Card.Header>
+	<div class="flex items-start justify-between gap-5">
+		<Card.Header>
+			<Card.Title>Experience</Card.Title>
+			<Card.Description>Professional background and work history</Card.Description>
+		</Card.Header>
+		<Button size="xs" variant="outline" class="gap-2"><Plus class="w-4" /> Add Position</Button>
+	</div>
 	<Card.Content>
 		<Table.Root>
 			<Table.Header>
@@ -62,7 +65,4 @@
 			</Table.Body>
 		</Table.Root>
 	</Card.Content>
-	<Card.Footer class="mb-2 justify-end gap-2">
-		<Button size="xs" variant="outline" class="gap-2"><Plus class="w-4" /> Add Position</Button>
-	</Card.Footer>
 </Card.Root>

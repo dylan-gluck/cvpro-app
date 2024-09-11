@@ -7,15 +7,15 @@
 </script>
 
 <Card.Root>
-	<Card.Header>
-		<Card.Title>Live Preview</Card.Title>
-		<div class="flex items-center justify-between gap-2">
+	<div class="flex items-start justify-between gap-2">
+		<Card.Header>
+			<Card.Title>Live Preview</Card.Title>
 			<Card.Description>Digital business card</Card.Description>
-			<Button variant="secondary" size="xs" class="gap-2">
-				<Pencil class="h-3 w-auto" /> Layout
-			</Button>
-		</div>
-	</Card.Header>
+		</Card.Header>
+		<Button variant="outline" size="xs" class="gap-2">
+			<Pencil class="h-3 w-auto" /> Customize
+		</Button>
+	</div>
 	<Card.Content>
 		<CardPreview />
 	</Card.Content>

@@ -6,10 +6,13 @@
 </script>
 
 <Card.Root>
-	<Card.Header>
-		<Card.Title>Contact info</Card.Title>
-		<Card.Description>Used on your resume, cover letters, & business card</Card.Description>
-	</Card.Header>
+	<div class="flex items-start justify-between gap-5">
+		<Card.Header>
+			<Card.Title>Contact info</Card.Title>
+			<Card.Description>Used on your resume, cover letters, & business card</Card.Description>
+		</Card.Header>
+		<Button size="xs" variant="active" class="gap-2"><Check class="w-4" /> Changes saved</Button>
+	</div>
 	<Card.Content class="grid grid-cols-1 gap-3 space-y-0 lg:grid-cols-2">
 		<InputFieldText id="user-name" label="Name" value="John Doe" placeholder="Your full name" />
 		<InputFieldText
@@ -43,8 +46,4 @@
 			placeholder="Best daytime phone number"
 		/>
 	</Card.Content>
-	<Card.Footer class="my-2 justify-end gap-2">
-		<Button size="xs" variant="secondary">Cancel</Button>
-		<Button size="xs" class="gap-2"><Check class="w-4" /> Save</Button>
-	</Card.Footer>
 </Card.Root>
