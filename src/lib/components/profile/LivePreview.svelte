@@ -1,9 +1,9 @@
 <script>
 	import * as Card from '$lib/components/ui/card';
-	import { Button } from '$lib/components/ui/button';
-	import { Pencil } from 'lucide-svelte';
+	import * as Select from '$lib/components/ui/select';
 	import ResumePreview from '$lib/components/profile/ResumePreview.svelte';
 	import CardPreview from '$lib/components/profile/CardPreview.svelte';
+	import { PencilRuler } from 'lucide-svelte';
 </script>
 
 <Card.Root>
@@ -12,9 +12,18 @@
 			<Card.Title>Live Preview</Card.Title>
 			<Card.Description>Digital business card</Card.Description>
 		</Card.Header>
-		<Button variant="outline" size="xs" class="gap-2">
-			<Pencil class="h-3 w-auto" /> Customize
-		</Button>
+		<div class="flex items-center gap-2">
+			<PencilRuler class="h-auto w-5 text-muted-foreground" />
+			<Select.Root selected={{ value: 'professional', label: 'Professional' }}>
+				<Select.Trigger class="w-[180px]">
+					<Select.Value placeholder="Layout" />
+				</Select.Trigger>
+				<Select.Content>
+					<Select.Item value="professional" label="Professional" />
+					<Select.Item value="creative" label="Creative" />
+				</Select.Content>
+			</Select.Root>
+		</div>
 	</div>
 	<Card.Content>
 		<CardPreview />
