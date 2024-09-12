@@ -1,8 +1,8 @@
 <script>
 	import * as Card from '$lib/components/ui/card';
 	import * as Select from '$lib/components/ui/select';
-	import ResumePreview from '$lib/components/profile/ResumePreview.svelte';
-	import CardPreview from '$lib/components/profile/CardPreview.svelte';
+	import ResumePreview from '$lib/components/preview/ResumePreview.svelte';
+	import CardPreview from '$lib/components/preview/CardPreview.svelte';
 	import { PencilRuler } from 'lucide-svelte';
 </script>
 

@@ -72,3 +72,10 @@
 .dark .filter-foreground {
 	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(299deg) brightness(102%) contrast(102%);
 }
+
+.nav-icon {
+	pointer-events: none;
+	margin-right: 0.5rem;
+	height: 1rem;
+	width: auto;
+}

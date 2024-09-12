@@ -1,4 +1,6 @@
 <script>
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import { Button } from '$lib/components/ui/button';
 	import {
 		CircleFadingArrowUp,
@@ -8,6 +10,16 @@
 		SquareUserRound
 	} from 'lucide-svelte';
 	import { LinkedinLogo } from 'svelte-radix';
+
+	function handleActive(path) {
+		// return 'ghost' or 'active'
+		return path === $page.route.id ? 'active' : 'ghost';
+	}
+
+	function navigationHandler(e) {
+		const target = '/' + e.target.name;
+		goto(target);
+	}
 </script>
 
 <header
@@ -22,20 +34,42 @@
 	</div>
 
 	<nav class="flex items-center justify-center">
-		<Button size="sidebar" variant="ghost" disabled>
-			<LayoutDashboard class="mr-2 h-4 w-auto" />
+		<Button
+			name="dashboard"
+			size="sidebar"
+			variant={handleActive('/dashboard')}
+			disabled
+			on:click={navigationHandler}
+		>
+			<LayoutDashboard class="nav-icon" />
 			Dashboard
 		</Button>
-		<Button size="sidebar" variant="active">
-			<SquareUserRound class="mr-2 h-4 w-auto" />
+		<Button
+			name="profile"
+			size="sidebar"
+			variant={handleActive('/profile')}
+			on:click={navigationHandler}
+		>
+			<SquareUserRound class="nav-icon" />
 			Profile
 		</Button>
-		<Button size="sidebar" variant="ghost">
-			<PencilRuler class="mr-2 h-4 w-auto" />
+		<Button
+			name="layout"
+			size="sidebar"
+			variant={handleActive('/layout')}
+			on:click={navigationHandler}
+		>
+			<PencilRuler class="nav-icon" />
 			Layout
 		</Button>
-		<Button size="sidebar" variant="ghost" disabled>
-			<FilePlus class="mr-2 h-4 w-auto" />
+		<Button
+			name="apply"
+			size="sidebar"
+			variant={handleActive('/apply')}
+			disabled
+			on:click={navigationHandler}
+		>
+			<FilePlus class="nav-icon" />
 			Apply
 		</Button>
 	</nav>
