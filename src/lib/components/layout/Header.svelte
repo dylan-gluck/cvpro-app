@@ -1,6 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import * as Avatar from '$lib/components/ui/avatar';
 	import { Button } from '$lib/components/ui/button';
 	import {
 		CircleFadingArrowUp,
@@ -81,6 +82,10 @@
 		<Button variant="outlinePrimary" size="sm" class="gap-1 text-muted-foreground">
 			<LinkedinLogo class="h-4 w-auto" /> Connected
 		</Button>
+		<Avatar.Root class="h-9 w-9">
+			<Avatar.Image src="https://github.com/dylan-gluck.png" alt="@dylan-gluck" />
+			<Avatar.Fallback>DG</Avatar.Fallback>
+		</Avatar.Root>
 	</div>
 </header>
 
